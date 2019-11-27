@@ -1241,8 +1241,13 @@ static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Cs
 static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_10getVersion(struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_12getTem(struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_14getHum(struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_18__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16getTemChanged(struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_18getHumChanged(struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_20setTemChange(struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self, PyObject *__pyx_v_tem); /* proto */
+static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_22setHumChange(struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self, PyObject *__pyx_v_hum); /* proto */
+static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_24setPeriod(struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self, PyObject *__pyx_v_tim); /* proto */
+static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_26__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_28__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_tp_new_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_int_0;
 static PyObject *__pyx_int_1;
@@ -1904,6 +1909,7 @@ static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Cs
  * 
  *     def getHum(self):             # <<<<<<<<<<<<<<
  *         return self.c_sht.getHum()
+ * 
  */
 
 /* Python wrapper */
@@ -1929,6 +1935,8 @@ static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Cs
  * 
  *     def getHum(self):
  *         return self.c_sht.getHum()             # <<<<<<<<<<<<<<
+ * 
+ *     def getTemChanged(self):
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->c_sht.getHum()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 88, __pyx_L1_error)
@@ -1942,12 +1950,315 @@ static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Cs
  * 
  *     def getHum(self):             # <<<<<<<<<<<<<<
  *         return self.c_sht.getHum()
+ * 
  */
 
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_AddTraceback("pyiArduinoI2Csht.pyiArduinoI2Csht.pyiArduinoI2Csht.getHum", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "pyiArduinoI2Csht/pyiArduinoI2Csht.pyx":90
+ *         return self.c_sht.getHum()
+ * 
+ *     def getTemChanged(self):             # <<<<<<<<<<<<<<
+ *         return self.c_sht.getTemChanged()
+ * 
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_17getTemChanged(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_17getTemChanged(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("getTemChanged (wrapper)", 0);
+  __pyx_r = __pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16getTemChanged(((struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16getTemChanged(struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  __Pyx_RefNannySetupContext("getTemChanged", 0);
+
+  /* "pyiArduinoI2Csht/pyiArduinoI2Csht.pyx":91
+ * 
+ *     def getTemChanged(self):
+ *         return self.c_sht.getTemChanged()             # <<<<<<<<<<<<<<
+ * 
+ *     def getHumChanged(self):
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_sht.getTemChanged()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* "pyiArduinoI2Csht/pyiArduinoI2Csht.pyx":90
+ *         return self.c_sht.getHum()
+ * 
+ *     def getTemChanged(self):             # <<<<<<<<<<<<<<
+ *         return self.c_sht.getTemChanged()
+ * 
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("pyiArduinoI2Csht.pyiArduinoI2Csht.pyiArduinoI2Csht.getTemChanged", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "pyiArduinoI2Csht/pyiArduinoI2Csht.pyx":93
+ *         return self.c_sht.getTemChanged()
+ * 
+ *     def getHumChanged(self):             # <<<<<<<<<<<<<<
+ *         return self.c_sht.getHumChanged()
+ * 
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_19getHumChanged(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_19getHumChanged(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("getHumChanged (wrapper)", 0);
+  __pyx_r = __pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_18getHumChanged(((struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_18getHumChanged(struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  __Pyx_RefNannySetupContext("getHumChanged", 0);
+
+  /* "pyiArduinoI2Csht/pyiArduinoI2Csht.pyx":94
+ * 
+ *     def getHumChanged(self):
+ *         return self.c_sht.getHumChanged()             # <<<<<<<<<<<<<<
+ * 
+ *     def setTemChange(self, tem):
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_sht.getHumChanged()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 94, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* "pyiArduinoI2Csht/pyiArduinoI2Csht.pyx":93
+ *         return self.c_sht.getTemChanged()
+ * 
+ *     def getHumChanged(self):             # <<<<<<<<<<<<<<
+ *         return self.c_sht.getHumChanged()
+ * 
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("pyiArduinoI2Csht.pyiArduinoI2Csht.pyiArduinoI2Csht.getHumChanged", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "pyiArduinoI2Csht/pyiArduinoI2Csht.pyx":96
+ *         return self.c_sht.getHumChanged()
+ * 
+ *     def setTemChange(self, tem):             # <<<<<<<<<<<<<<
+ *         return self.c_sht.setTemChange(tem)
+ * 
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_21setTemChange(PyObject *__pyx_v_self, PyObject *__pyx_v_tem); /*proto*/
+static PyObject *__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_21setTemChange(PyObject *__pyx_v_self, PyObject *__pyx_v_tem) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("setTemChange (wrapper)", 0);
+  __pyx_r = __pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_20setTemChange(((struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *)__pyx_v_self), ((PyObject *)__pyx_v_tem));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_20setTemChange(struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self, PyObject *__pyx_v_tem) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  float __pyx_t_1;
+  PyObject *__pyx_t_2 = NULL;
+  __Pyx_RefNannySetupContext("setTemChange", 0);
+
+  /* "pyiArduinoI2Csht/pyiArduinoI2Csht.pyx":97
+ * 
+ *     def setTemChange(self, tem):
+ *         return self.c_sht.setTemChange(tem)             # <<<<<<<<<<<<<<
+ * 
+ *     def setHumChange(self, hum):
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __pyx_PyFloat_AsFloat(__pyx_v_tem); if (unlikely((__pyx_t_1 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 97, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyBool_FromLong(__pyx_v_self->c_sht.setTemChange(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 97, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_r = __pyx_t_2;
+  __pyx_t_2 = 0;
+  goto __pyx_L0;
+
+  /* "pyiArduinoI2Csht/pyiArduinoI2Csht.pyx":96
+ *         return self.c_sht.getHumChanged()
+ * 
+ *     def setTemChange(self, tem):             # <<<<<<<<<<<<<<
+ *         return self.c_sht.setTemChange(tem)
+ * 
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_AddTraceback("pyiArduinoI2Csht.pyiArduinoI2Csht.pyiArduinoI2Csht.setTemChange", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "pyiArduinoI2Csht/pyiArduinoI2Csht.pyx":99
+ *         return self.c_sht.setTemChange(tem)
+ * 
+ *     def setHumChange(self, hum):             # <<<<<<<<<<<<<<
+ *         return self.c_sht.setHumChange(hum)
+ * 
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_23setHumChange(PyObject *__pyx_v_self, PyObject *__pyx_v_hum); /*proto*/
+static PyObject *__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_23setHumChange(PyObject *__pyx_v_self, PyObject *__pyx_v_hum) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("setHumChange (wrapper)", 0);
+  __pyx_r = __pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_22setHumChange(((struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *)__pyx_v_self), ((PyObject *)__pyx_v_hum));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_22setHumChange(struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self, PyObject *__pyx_v_hum) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  float __pyx_t_1;
+  PyObject *__pyx_t_2 = NULL;
+  __Pyx_RefNannySetupContext("setHumChange", 0);
+
+  /* "pyiArduinoI2Csht/pyiArduinoI2Csht.pyx":100
+ * 
+ *     def setHumChange(self, hum):
+ *         return self.c_sht.setHumChange(hum)             # <<<<<<<<<<<<<<
+ * 
+ *     def setPeriod(self, tim):
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __pyx_PyFloat_AsFloat(__pyx_v_hum); if (unlikely((__pyx_t_1 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 100, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyBool_FromLong(__pyx_v_self->c_sht.setHumChange(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 100, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_r = __pyx_t_2;
+  __pyx_t_2 = 0;
+  goto __pyx_L0;
+
+  /* "pyiArduinoI2Csht/pyiArduinoI2Csht.pyx":99
+ *         return self.c_sht.setTemChange(tem)
+ * 
+ *     def setHumChange(self, hum):             # <<<<<<<<<<<<<<
+ *         return self.c_sht.setHumChange(hum)
+ * 
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_AddTraceback("pyiArduinoI2Csht.pyiArduinoI2Csht.pyiArduinoI2Csht.setHumChange", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "pyiArduinoI2Csht/pyiArduinoI2Csht.pyx":102
+ *         return self.c_sht.setHumChange(hum)
+ * 
+ *     def setPeriod(self, tim):             # <<<<<<<<<<<<<<
+ *         return self.c_sht.setPeriod(tim)
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_25setPeriod(PyObject *__pyx_v_self, PyObject *__pyx_v_tim); /*proto*/
+static PyObject *__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_25setPeriod(PyObject *__pyx_v_self, PyObject *__pyx_v_tim) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("setPeriod (wrapper)", 0);
+  __pyx_r = __pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_24setPeriod(((struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *)__pyx_v_self), ((PyObject *)__pyx_v_tim));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_24setPeriod(struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self, PyObject *__pyx_v_tim) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  float __pyx_t_1;
+  PyObject *__pyx_t_2 = NULL;
+  __Pyx_RefNannySetupContext("setPeriod", 0);
+
+  /* "pyiArduinoI2Csht/pyiArduinoI2Csht.pyx":103
+ * 
+ *     def setPeriod(self, tim):
+ *         return self.c_sht.setPeriod(tim)             # <<<<<<<<<<<<<<
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __pyx_PyFloat_AsFloat(__pyx_v_tim); if (unlikely((__pyx_t_1 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 103, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyBool_FromLong(__pyx_v_self->c_sht.setPeriod(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 103, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_r = __pyx_t_2;
+  __pyx_t_2 = 0;
+  goto __pyx_L0;
+
+  /* "pyiArduinoI2Csht/pyiArduinoI2Csht.pyx":102
+ *         return self.c_sht.setHumChange(hum)
+ * 
+ *     def setPeriod(self, tim):             # <<<<<<<<<<<<<<
+ *         return self.c_sht.setPeriod(tim)
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_AddTraceback("pyiArduinoI2Csht.pyiArduinoI2Csht.pyiArduinoI2Csht.setPeriod", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1962,19 +2273,19 @@ static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Cs
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_17__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_17__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_27__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_27__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__reduce_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16__reduce_cython__(((struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *)__pyx_v_self));
+  __pyx_r = __pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_26__reduce_cython__(((struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self) {
+static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_26__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2016,19 +2327,19 @@ static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Cs
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_19__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
-static PyObject *__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_19__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_29__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
+static PyObject *__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_29__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__setstate_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_18__setstate_cython__(((struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
+  __pyx_r = __pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_28__setstate_cython__(((struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_18__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_28__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduinoI2Csht *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2099,8 +2410,13 @@ static PyMethodDef __pyx_methods_16pyiArduinoI2Csht_16pyiArduinoI2Csht_pyiArduin
   {"getVersion", (PyCFunction)__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_11getVersion, METH_NOARGS, 0},
   {"getTem", (PyCFunction)__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_13getTem, METH_NOARGS, 0},
   {"getHum", (PyCFunction)__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_15getHum, METH_NOARGS, 0},
-  {"__reduce_cython__", (PyCFunction)__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_17__reduce_cython__, METH_NOARGS, 0},
-  {"__setstate_cython__", (PyCFunction)__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_19__setstate_cython__, METH_O, 0},
+  {"getTemChanged", (PyCFunction)__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_17getTemChanged, METH_NOARGS, 0},
+  {"getHumChanged", (PyCFunction)__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_19getHumChanged, METH_NOARGS, 0},
+  {"setTemChange", (PyCFunction)__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_21setTemChange, METH_O, 0},
+  {"setHumChange", (PyCFunction)__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_23setHumChange, METH_O, 0},
+  {"setPeriod", (PyCFunction)__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_25setPeriod, METH_O, 0},
+  {"__reduce_cython__", (PyCFunction)__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_27__reduce_cython__, METH_NOARGS, 0},
+  {"__setstate_cython__", (PyCFunction)__pyx_pw_16pyiArduinoI2Csht_16pyiArduinoI2Csht_16pyiArduinoI2Csht_29__setstate_cython__, METH_O, 0},
   {0, 0, 0, 0}
 };
 

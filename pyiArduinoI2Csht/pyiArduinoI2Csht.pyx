@@ -86,3 +86,18 @@ cdef class pyiArduinoI2Csht:
 
     def getHum(self):
         return self.c_sht.getHum()
+
+    def getTemChanged(self):
+        return self.c_sht.getTemChanged()
+
+    def getHumChanged(self):
+        return self.c_sht.getHumChanged()
+
+    def setTemChange(self, tem):
+        return self.c_sht.setTemChange(tem)
+
+    def setHumChange(self, hum):
+        return self.c_sht.setHumChange(hum)
+
+    def setPeriod(self, tim):
+        return self.c_sht.setPeriod(tim)

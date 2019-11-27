@@ -2,7 +2,9 @@
 
 # pyiArduinoI2Csht
 
-**Данная библилотека (модуль для Python3) позволяет управлять электронными модулями (устройствами) [Цифровой датчик температуры и влажности]() от iArduino.ru по шине I2C на Raspberry Pi.**
+**Данная библилотека (модуль для Python3) позволяет управлять электронными модулями (устройствами) [Цифровой датчик температуры и влажности](https://iarduino.ru/shop/Sensory-Datchiki/datchik-temperatury-i-vlazhnosti-i2c-trema-modul-v2-0.html) от iArduino.ru по шине I2C на Raspberry Pi.**
+
+Подробнее про датчик читайте в нашей [Wiki](https://wiki.iarduino.ru/page/SHT-trema-i2c/#h3_5)
 
 ## Установка ##
 
@@ -27,4 +29,4 @@
 Для удаления собранных исполняемых файлов:
 `make clean`
 
-**This is a Python3 module for Raspberry Pi. It can work with [Digital tempreture sensor]() by iarduino.ru**
+**This is a Python3 module for Raspberry Pi. It can work with [Digital tempreture sensor](https://iarduino.ru/shop/Sensory-Datchiki/datchik-temperatury-i-vlazhnosti-i2c-trema-modul-v2-0.html) by iarduino.ru**
