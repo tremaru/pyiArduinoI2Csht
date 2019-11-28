@@ -17,7 +17,7 @@
 //#include		<WProgram.h>																											//
 //#endif																															    //
 																																		//
-#include		<iarduino_I2C_PI.h>																							        	//	Подключаем файл iarduino_I2C_SHT.h - для работы с шиной I2C		(используя функции структуры iI2C)
+#include		"iarduino_I2C_PI.h"																							        	//	Подключаем файл iarduino_I2C_SHT.h - для работы с шиной I2C		(используя функции структуры iI2C)
 
 //#define tmrPeriodFLG 30
 																																		//
