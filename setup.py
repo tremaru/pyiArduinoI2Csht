@@ -19,7 +19,7 @@ setup(name='pyiArduinoI2Csht',
 #   package=['pyiArduinoI2Cexpander'],
     ext_modules = [Extension(
         name="pyiArduinoI2Csht",
-        sources=["pyiArduinoI2Cexpander/pyiArduinoI2Csht.cpp"])],
+        sources=["pyiArduinoI2Csht/pyiArduinoI2Csht.cpp"])],
 #   include_package_data=True,
 #   zip_safe=False,
 #   python_requires='>=3',
