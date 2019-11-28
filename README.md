@@ -16,7 +16,7 @@
 
 Самостоятельная сборка из исходников:
 
-`git clone https://github.com/tremaru/pyiArduinoI2Csht.git && cd pyiArduinoI2Cexpander/pyiArduinoI2Csht && python3 setup.py build_ext --inplace`
+`git clone https://github.com/tremaru/pyiArduinoI2Csht.git && cd pyiArduinoI2Csht/pyiArduinoI2Csht && python3 setup.py build_ext --inplace`
 
 Примеры для Python находятся в папке `pyiArduinoI2Csht/examples`
 
