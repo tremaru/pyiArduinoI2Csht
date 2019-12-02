@@ -10,10 +10,10 @@ from time import sleep
 sht = pyiArduinoI2Csht()
 
 # Указываем фиксировать изменение температуры окружающей среды более чем на 0.1°С.
-sht.setTemChange( 0.1 )
+sht.setTemChange(0.1)
 
 # Указываем фиксировать изменение влажности воздуха более чем на 1%.
-sht.setHumChange( 1.0 )
+sht.setHumChange(1.0)
 
 while True:
 
@@ -22,15 +22,15 @@ while True:
     if sht.getTemChanged():
 
         # Выводим текущую температуру окружающей среды, от -40 до +125°С.
-        print("Температура = ")
-        print( sht.getTem() )
-        print(" °С.\r\n")
+        print("Температура = %.1f" %
+               sht.getTem(),
+              "°С.")
 
     # Если влажность воздуха изменилась более чем на значение указанное в функции setHumChange(), то ...
     if sht.getHumChanged():
 
         # Выводим текущую влажность воздуха, от 0 до 100%.
-        print("Влажность = ")
-        print( sht.getHum() )
-        print(" %.\r\n")
+        print("Влажность = %.1f" %
+               sht.getHum(),
+              "%.")
     sleep(0.1)

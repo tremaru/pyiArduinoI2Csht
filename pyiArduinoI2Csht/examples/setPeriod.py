@@ -5,7 +5,7 @@ from pyiArduinoI2Csht import *
 from time import sleep
 
 # Объявляем объект sht для работы с функциями и методами библиотеки pyiArduinoI2Csht.
-# Если при объявлении объекта указать адрес, например, sht(0xBB),
+# Если при объявлении объекта указать адрес, например, sht(0x09),
 # то пример будет работать с тем модулем, адрес которого был указан.
 sht = pyiArduinoI2Csht()
 
@@ -14,6 +14,6 @@ sht.setPeriod(2.0)
 
 while True:
     # Выводим текущую температуру и влажность
-    print("t="+str(sht.getTem())+"°C, ")
-    print("RH="+str(sht.getHum())+"%%")
+    print("t = %.1f" % sht.getTem(),"°C,",
+          "RH = %.1f" % sht.getHum(),"%%")
     sleep(.1)
