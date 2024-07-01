@@ -1,3 +1,8 @@
+from libcpp.string cimport string
+
+cdef extern from "iarduino_I2C_PI.cpp":
+    pass
+
 cdef extern from "iarduino_I2C_SHT.cpp":
     pass
 
@@ -17,3 +22,6 @@ cdef extern from "iarduino_I2C_SHT.h":
         bint setTemChange(float)
         bint setHumChange(float)
         bint setPeriod(float)
+        bint getPullI2C()
+        bint setPullI2C(bint)
+        void changeBus(string)

@@ -32,17 +32,20 @@ SHT_FLG_CHANGED      =  0x01
 NO_BEGIN = 1
 
 cdef class pyiArduinoI2Csht:
-    cdef iarduino_I2C_SHT c_sht
+    cdef iarduino_I2C_SHT c_module
 
-    def __cinit__(self, address=None, auto=None):
+    def __cinit__(self, address=None, auto=None, bus=None):
 
         if address is not None:
 
-            self.c_sht = iarduino_I2C_SHT(address)
+            self.c_module = iarduino_I2C_SHT(address)
+
+            if bus is not None:
+                self.changeBus(bus)
 
             if auto is None:
                 #sleep(.5)
-                if not self.c_sht.begin():
+                if not self.c_module.begin():
 
                     print("ошибка инициализации модуля.\n"
                           "Проверьте подключение и адрес модуля,"
@@ -53,11 +56,14 @@ cdef class pyiArduinoI2Csht:
 
         else:
 
-            self.c_sht = iarduino_I2C_SHT()
+            self.c_module = iarduino_I2C_SHT()
+
+            if bus is not None:
+                self.changeBus(bus)
 
             if auto is None:
                 #sleep(.5)
-                if not self.c_sht.begin():
+                if not self.c_module.begin():
 
                     print("ошибка инициализации модуля.\n"
                           "Проверьте подключение и адрес модуля, "
@@ -67,37 +73,46 @@ cdef class pyiArduinoI2Csht:
                           " https://wiki.iarduino.ru/page/raspberry-i2c-spi/")
 
     def begin(self):
-        return self.c_sht.begin()
+        return self.c_module.begin()
 
     def changeAddress(self, unsigned char newAddr):
-        return self.c_sht.changeAddress(newAddr)
+        return self.c_module.changeAddress(newAddr)
 
     def reset(self):
-        return self.c_sht.reset()
+        return self.c_module.reset()
 
     def getAddress(self):
-        return self.c_sht.getAddress()
+        return self.c_module.getAddress()
 
     def getVersion(self):
-        return self.c_sht.getVersion()
+        return self.c_module.getVersion()
 
     def getTem(self):
-        return self.c_sht.getTem()
+        return self.c_module.getTem()
 
     def getHum(self):
-        return self.c_sht.getHum()
+        return self.c_module.getHum()
 
     def getTemChanged(self):
-        return self.c_sht.getTemChanged()
+        return self.c_module.getTemChanged()
 
     def getHumChanged(self):
-        return self.c_sht.getHumChanged()
+        return self.c_module.getHumChanged()
 
     def setTemChange(self, tem):
-        return self.c_sht.setTemChange(tem)
+        return self.c_module.setTemChange(tem)
 
     def setHumChange(self, hum):
-        return self.c_sht.setHumChange(hum)
+        return self.c_module.setHumChange(hum)
 
     def setPeriod(self, tim):
-        return self.c_sht.setPeriod(tim)
+        return self.c_module.setPeriod(tim)
+
+    def getPullI2C(self):
+        return self.c_module.getPullI2C()
+
+    def setPullI2C(self, val):
+        return self.c_module.setPullI2C(val)
+
+    def changeBus(self, bus):
+        return self.c_module.changeBus(bytes(bus, 'utf-8'))
